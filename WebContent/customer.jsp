@@ -13,12 +13,12 @@
             
             <div>
                 <label for="id">Customer ID</label> 
-                <input type="text" name="studentId" value="<c:out value="${customer.id}" />" readonly="readonly" placeholder="ID" />
+                <input type="text" name="id" value="<c:out value="${customer.id}" />" readonly="readonly" placeholder="ID" />
             </div>
             
             <div>
                 <label for="firstname">First Name</label> 
-                <input type="text" name="firstname" value="<c:out value="${customer.firstName}" />" placeholder="First Name" />
+                <input type="text" name="firstname" value="<c:out value="${customer.firstname}" />" placeholder="First Name" />
             </div>
 
             <div>
@@ -26,7 +26,7 @@
                 <input type="text" name="lastname" value="<c:out value="${customer.lastname}" />" placeholder="Last Name" />
             </div>
             
-                        <div>
+            <div>
                 <label for="email">Email</label> 
                 <input type="text" name="email" value="<c:out value="${customer.email}" />" placeholder="E-Mail" />
             </div>

@@ -7,6 +7,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import com.mysql.jdbc.Driver;
+
 public class DBUtil {
 	private static Connection connection;
 

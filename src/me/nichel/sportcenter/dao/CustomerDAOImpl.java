@@ -20,13 +20,16 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	public void add(final Customer customer) {
 		try {
-			final String query = "insert into customer (firstname, lastname, email) values (?,?,?)";
+			final String query = "insert into customer (firstname, lastname, email) values (?, ?, ?)";
 			final PreparedStatement preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, customer.getFirstname());
 			preparedStatement.setString(2, customer.getLastname());
 			preparedStatement.setString(3, customer.getEmail());
-			preparedStatement.executeUpdate();
+			
+			final int id = preparedStatement.executeUpdate();
 			preparedStatement.close();
+			
+			System.out.printf("add: %d", id);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -35,8 +38,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	public void delete(final int id) {
 		try {
-			final String query = "delete from customer where id = ?";
-
+			final String query = "delete from customer where id=?";
 			final PreparedStatement preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setInt(1, id);
 			preparedStatement.executeUpdate();
@@ -97,7 +99,7 @@ public class CustomerDAOImpl implements CustomerDAO {
             preparedStatement.setInt(1, id);
             
             ResultSet resultSet = preparedStatement.executeQuery();
-            while( resultSet.next() ) {
+            while (resultSet.next()) {
 				customer.setId(resultSet.getInt("id"));
 				customer.setFirstname(resultSet.getString("firstname"));
 				customer.setLastname(resultSet.getString("lastname"));
