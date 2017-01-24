@@ -38,8 +38,6 @@
         	</tbody>
     	</table>
     	
-    	<p>
-        	<a href="CustomerServlet.do?action=insert">Add Student</a>
-    	</p>
+    	<p><a href="CustomerServlet.do?action=insert">Add Student</a></p>
 	</body>
 </html>
