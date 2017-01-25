@@ -19,6 +19,7 @@ public class CustomerServlet extends HttpServlet {
 
 	public static final String CUSTOMER_LIST = "/customers_list.jsp";
 	public static final String INSERT_OR_EDIT = "/customer.jsp";
+	public static final String VIEW = "/customer_view.jsp";
 
 	private final CustomerDAO dao;
 
@@ -43,6 +44,18 @@ public class CustomerServlet extends HttpServlet {
 
         		break;
         	}
+        	
+        	case "view": {
+                forward = VIEW;
+
+                int id = Integer.parseInt(request.getParameter("id"));
+                final Customer customer = dao.get(id);
+
+                request.setAttribute("customer", customer);
+
+        		break;
+        	}
+        	
         	
         	case "edit": {
                 forward = INSERT_OR_EDIT;

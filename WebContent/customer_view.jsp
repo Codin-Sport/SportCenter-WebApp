@@ -21,26 +21,15 @@
         	</thead>
         	
         	<tbody>
-            	<c:forEach items="${customers}" var="customer">
                 	<tr>
                     	<td><c:out value="${customer.id}" /></td>
                     	<td><c:out value="${customer.firstname}" /></td>
                     	<td><c:out value="${customer.lastname}" /></td>
-                    	<td><c:out value="${customer.email}" /></td>
-                    	<td>
-                    		<a href="CustomerServlet.do?action=view&id=<c:out value="${customer.id}"/>">View</a>
-                    	</td>
-                    	<td>
-                    		<a href="CustomerServlet.do?action=edit&id=<c:out value="${customer.id}"/>">Update</a>
-                    	</td>
-                    	<td>
-                    	    <a href="CustomerServlet.do?action=delete&id=<c:out value="${customer.id}"/>">Delete</a>
-						</td>                    	                    	
+                    	<td><c:out value="${customer.email}" /></td>                    	                    	
                 	</tr>
-            	</c:forEach>
         	</tbody>
     	</table>
     	
-    	<p><a href="CustomerServlet.do?action=insert">Add Student</a></p>
+    	<p><a href="index.jsp">Back to list</a></p>
 	</body>
 </html>
