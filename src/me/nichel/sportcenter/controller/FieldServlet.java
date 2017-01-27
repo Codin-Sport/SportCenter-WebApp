@@ -1,6 +1,8 @@
 package me.nichel.sportcenter.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,23 +10,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import me.nichel.sportcenter.dao.CustomerDAOImpl;
+import me.nichel.sportcenter.dao.FieldDAOImpl;
 import me.nichel.sportcenter.dao.GenericDAO;
-import me.nichel.sportcenter.model.Customer;
+import me.nichel.sportcenter.model.Field;
 
-public class CustomerServlet extends HttpServlet {
+public class FieldServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public static final String LIST = "/customers_list.jsp";
-	public static final String INSERT_OR_EDIT = "/customer_edit.jsp";
-	public static final String VIEW = "/customer_view.jsp";
+	public static final String LIST = "/fields_list.jsp";
+	public static final String INSERT_OR_EDIT = "/field_edit.jsp";
+	public static final String VIEW = "/field_view.jsp";
 
-	private final GenericDAO<Customer> dao;
+	private final GenericDAO<Field> dao;
 
-	public CustomerServlet() {
+	public FieldServlet() {
 		super();
 
-		dao = new CustomerDAOImpl();
+		dao = new FieldDAOImpl();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,7 +40,7 @@ public class CustomerServlet extends HttpServlet {
                 int id = Integer.parseInt(request.getParameter("id"));
                 dao.delete(id);
                 
-                request.setAttribute("customers", dao.getAll());
+                request.setAttribute("fields", dao.getAll());
                 
         		break;
         	}
@@ -48,7 +50,7 @@ public class CustomerServlet extends HttpServlet {
 
                 int id = Integer.parseInt(request.getParameter("id"));
 
-                request.setAttribute("customer", dao.get(id));
+                request.setAttribute("field", dao.get(id));
 
         		break;
         	}
@@ -58,7 +60,7 @@ public class CustomerServlet extends HttpServlet {
 
                 int id = Integer.parseInt(request.getParameter("id"));
 
-                request.setAttribute("customer", dao.get(id));
+                request.setAttribute("field", dao.get(id));
 
         		break;
         	}
@@ -73,7 +75,7 @@ public class CustomerServlet extends HttpServlet {
         	default: {
         		forward = LIST;
         		
-                request.setAttribute("customers", dao.getAll());
+                request.setAttribute("fields", dao.getAll());
         	}
         }
 
@@ -82,22 +84,28 @@ public class CustomerServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final Customer customer = new Customer();
-		customer.setFirstname(request.getParameter("firstname"));
-		customer.setLastname(request.getParameter("lastname"));
-		customer.setEmail(request.getParameter("email"));
+		final Field field = new Field();
+		field.setName(request.getParameter("name"));
+		field.setType(0);
+		
+		final List<String> sports = new ArrayList<>();
+		sports.add(request.getParameter("sport_001"));
+		sports.add(request.getParameter("sport_002"));
+		sports.add(request.getParameter("sport_003"));
+		sports.add(request.getParameter("sport_004"));
+		field.setSports(sports);
 
 		final String id = request.getParameter("id");
 
 		if (id == null || id.isEmpty())
-			dao.add(customer);
+			dao.add(field);
 		else {
-			customer.setId(Integer.parseInt(id));
-			dao.update(customer);
+			field.setId(Integer.parseInt(id));
+			dao.update(field);
 		}
 		
 		final RequestDispatcher view = request.getRequestDispatcher(LIST);
-		request.setAttribute("customers", dao.getAll());
+		request.setAttribute("fields", dao.getAll());
 		
 		view.forward(request, response);
 	}

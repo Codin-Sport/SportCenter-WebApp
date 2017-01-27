@@ -23,7 +23,7 @@ public class DBUtil {
 				String user = properties.getProperty("user");
 				String password = properties.getProperty("password");
 
-				Class.forName(driver);
+				Class.forName(driver); 
 
 				connection = DriverManager.getConnection(url, user, password);
 			} catch (IOException e) {

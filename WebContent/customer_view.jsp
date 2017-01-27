@@ -16,7 +16,6 @@
                 	<th>First Name</th>
                 	<th>Last Name</th>
                 	<th>E-Mail</th>
-                	<th colspan="2">Action</th>
             	</tr>
         	</thead>
         	
