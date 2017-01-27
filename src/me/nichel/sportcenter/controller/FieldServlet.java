@@ -89,10 +89,10 @@ public class FieldServlet extends HttpServlet {
 		field.setType(0);
 		
 		final List<String> sports = new ArrayList<>();
+		sports.add(request.getParameter("sport_000"));
 		sports.add(request.getParameter("sport_001"));
 		sports.add(request.getParameter("sport_002"));
 		sports.add(request.getParameter("sport_003"));
-		sports.add(request.getParameter("sport_004"));
 		field.setSports(sports);
 
 		final String id = request.getParameter("id");

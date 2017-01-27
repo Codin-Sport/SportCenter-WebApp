@@ -4,9 +4,12 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
 
 <title>Welcome</title>
 </head>
@@ -18,16 +21,15 @@
 			<a class="navbar-brand" href="index.jsp">Codin Sport Center</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="CustomerServlet.do?action=list">Customer</a></li>
-			<li class="active"><a href="FieldServlet.do?action=list">Field</a></li>
+			<li><a href="CustomerServlet.do?action=list">Customers</a></li>
+			<li class="active"><a href="FieldServlet.do?action=list">Fields</a></li>
 		</ul>
 	</div>
 	</nav>
-	<div class="container-fluid col-md-4">
+	<div class="container-fluid">
 		<div class="panel panel-info">
 			<div class="panel-heading">Field List</div>
-			<div class="panel-body">
-				<table class="table table-bordered table-striped table-hover">
+				<table class="table table-bordered table-striped table-hover table-condensed">
 					<thead>
 						<tr>
 							<th>Nome</th>
@@ -35,7 +37,7 @@
 							<th>II Sport</th>
 							<th>III Sport</th>
 							<th>IV Sport</th>
-							<th colspan="3">Action</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -47,17 +49,28 @@
 								<td><c:out value="${field.sports[2]}" /></td>
 								<td><c:out value="${field.sports[3]}" /></td>
 								<td>
-									<a class="btn btn-primary" href="FieldServlet.do?action=view&id=<c:out value="${field.id}"/>">View</a>
-									<a class="btn btn-warning" href="FieldServlet.do?action=edit&id=<c:out value="${field.id}"/>">Update</a>
-									<a class="btn btn-danger" href="FieldServlet.do?action=delete&id=<c:out value="${field.id}"/>">Delete</a>
+									<a class="btn btn-primary" href="FieldServlet.do?action=view&id=<c:out value="${field.id}"/>">
+										<span class="glyphicon glyphicon-search" aria-hidden="true"></span>																	
+									</a>
+									
+									<a class="btn btn-warning" href="FieldServlet.do?action=edit&id=<c:out value="${field.id}"/>">
+										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+									</a>																	
+									
+									<a class="btn btn-danger" href="FieldServlet.do?action=delete&id=<c:out value="${field.id}"/>">
+										<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>								
+									</a>
 								</td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-				<a class="btn btn-block btn-success" href="FieldServlet.do?action=insert">Add New Field</a>				
+				<div class="panel-footer">		
+					<a class="btn btn-block btn-success" href="FieldServlet.do?action=insert">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>																						
+					Add New Field</a>				
+				</div>	
 			</div>
 		</div>
-	</div>
 </body>
 </html>

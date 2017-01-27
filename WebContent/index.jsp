@@ -5,22 +5,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css" />
 
 <title>Welcome</title>
 </head>
 
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-          <a class="navbar-brand" href="index.jsp">Codin Sport Center</a>   
-	</div>
-	<ul class="nav navbar-nav">
-	 	<li><a href="CustomerServlet.do?action=list">Customer</a></li>
-	 	<li><a href="FieldServlet.do?action=list">Field</a></li>
-	</ul>	
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.jsp">Codin Sport Center</a>
+		</div>
+		
+		<ul class="nav navbar-nav">
+			<li><a href="CustomerServlet.do?action=list">Customers</a></li>
+			<li><a href="FieldServlet.do?action=list">Fields</a></li>
+		</ul>
+		
+	</nav>
+
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
 </div>
-</nav>
+
+
 </body>
 </html>

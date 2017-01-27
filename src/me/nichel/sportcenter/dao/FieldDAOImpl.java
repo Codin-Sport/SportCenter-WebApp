@@ -76,6 +76,7 @@ public class FieldDAOImpl implements GenericDAO<Field> {
 					preparedStatement.setString((3 + i), field.getSports().get(i));
 				}
 			}
+			
 			preparedStatement.setLong(7, field.getId());
 
 			preparedStatement.executeUpdate();
@@ -143,6 +144,8 @@ public class FieldDAOImpl implements GenericDAO<Field> {
 				sports.add(resultSet.getString("sport_001"));
 				sports.add(resultSet.getString("sport_002"));
 				sports.add(resultSet.getString("sport_003"));
+				
+				field.setSports(sports);
             }
             resultSet.close();
             preparedStatement.close();
