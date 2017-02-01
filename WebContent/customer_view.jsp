@@ -9,14 +9,14 @@
 	</head>
 	
 	<body>
+		<%@ include file="_header.jsp" %>
     	<table>
         	<thead>
             	<tr>
                 	<th>ID</th>
-                	<th>First Namssse</th>
+                	<th>First Name</th>
                 	<th>Last Name</th>
                 	<th>E-Mail</th>
-                	<th colspan="2">Action</th>
             	</tr>
         	</thead>
         	
@@ -29,7 +29,5 @@
                 	</tr>
         	</tbody>
     	</table>
-    	
-    	<p><a href="index.jsp">Back to list</a></p>
 	</body>
 </html>

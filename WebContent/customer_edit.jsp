@@ -4,10 +4,12 @@
 
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">		
+		
 		<title>Add New Customer</title>
 	</head>
 	<body>
+		<%@ include file="_header.jsp" %>
     	<form action="CustomerServlet.do" method="post">
         	<fieldset>           
 	            <div>

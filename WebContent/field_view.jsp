@@ -9,15 +9,16 @@
 	</head>
 	
 	<body>
+		<%@ include file="_header.jsp" %>
     	<table>
         	<thead>
             	<tr>
                 	<th>ID</th>
                 	<th>Name</th>
-                	<th>I Sport</th>
-                	<th>II Sport</th>
-                	<th>III Sport</th>
-                	<th>IV Sport</th>
+                	<th>Sport I</th>
+                	<th>Sport II</th>
+                	<th>Sport III</th>
+                	<th>Sport IV</th>
             	</tr>
         	</thead>
         	
@@ -32,7 +33,5 @@
                 	</tr>
         	</tbody>
     	</table>
-    	
-    	<p><a href="index.jsp">Back to list</a></p>
 	</body>
 </html>

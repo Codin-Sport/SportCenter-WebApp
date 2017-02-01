@@ -15,28 +15,18 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="index.jsp">Codin Sport Center</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li><a href="CustomerServlet.do?action=list">Customers</a></li>
-			<li class="active"><a href="FieldServlet.do?action=list">Fields</a></li>
-		</ul>
-	</div>
-	</nav>
+	<%@ include file="_header.jsp" %>
 	<div class="container-fluid">
 		<div class="panel panel-info">
 			<div class="panel-heading">Field List</div>
 				<table class="table table-bordered table-striped table-hover table-condensed">
 					<thead>
 						<tr>
-							<th>Nome</th>
-							<th>I Sport</th>
-							<th>II Sport</th>
-							<th>III Sport</th>
-							<th>IV Sport</th>
+		                	<th>Name</th>
+		                	<th>Sport I</th>
+		                	<th>Sport II</th>
+		                	<th>Sport III</th>
+		                	<th>Sport IV</th>
 							<th>Action</th>
 						</tr>
 					</thead>
