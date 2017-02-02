@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 

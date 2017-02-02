@@ -4,6 +4,7 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">		
 		
 		<title>Add New Customer</title>
@@ -11,30 +12,19 @@
 	<body>
 		<%@ include file="_header.jsp" %>
     	<form action="CustomerServlet.do" method="post">
-        	<fieldset>           
-	            <div>
-	                <label for="id">Customer ID</label> 
-	                <input type="text" name="id" value="<c:out value="${customer.id}" />" readonly="readonly" placeholder="ID" />
-	            </div>
-	           
-	            <div>
-	                <label for="firstname">First Name</label> 
-	                <input type="text" name="firstname" value="<c:out value="${customer.firstname}" />" placeholder="First Name" />
+        	<fieldset>
+	            <div class="form-group">
+	                <label for="firstname">Your Name</label> 
+	                <input type="text" class="form-control" name="firstname" value="<c:out value="${customer.firstname}" />" placeholder="first" />
+	                <input type="text" class="form-control" name="lastname" value="<c:out value="${customer.lastname}" />" placeholder="last" />
 	            </div>
 	
-	            <div>
-	                <label for="lastname">Last Name</label> 
-	                <input type="text" name="lastname" value="<c:out value="${customer.lastname}" />" placeholder="Last Name" />
-	            </div>
-	            
-	            <div>
+	            <div class="form-group">
 	                <label for="email">Email</label> 
-	                <input type="text" name="email" value="<c:out value="${customer.email}" />" placeholder="E-Mail" />
+	                <input type="email" class="form-control" name="email" value="<c:out value="${customer.email}" />" placeholder="name@example.com" />
 	            </div>
 	
-	            <div>
-	                <input type="submit" value="Submit" />
-	            </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
         	</fieldset>
     	</form>
 	</body>

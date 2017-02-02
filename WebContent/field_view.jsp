@@ -4,13 +4,18 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Show All Field</title>
 	</head>
 	
 	<body>
 		<%@ include file="_header.jsp" %>
-    	<table>
+		<div class="container-fluid">
+		<div class="panel panel-info">
+			<div class="panel-heading">Field Detail</div>		
+				<table class="table table-bordered table-striped table-hover table-condensed">
+	
         	<thead>
             	<tr>
                 	<th>ID</th>
@@ -33,5 +38,7 @@
                 	</tr>
         	</tbody>
     	</table>
+    	</div>
+    	</div>
 	</body>
 </html>

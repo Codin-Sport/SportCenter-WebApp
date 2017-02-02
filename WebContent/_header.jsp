@@ -6,5 +6,6 @@
 		<ul class="nav navbar-nav">
 			<li><a href="CustomerServlet.do?action=list">Customers</a></li>
 			<li><a href="FieldServlet.do?action=list">Fields</a></li>
+			<li><a href="ReservationServlet.do?action=list">Reservations</a></li>
 		</ul>
 </nav>

@@ -19,6 +19,11 @@
 		<servlet-name>FieldServlet</servlet-name>
 		<servlet-class>me.nichel.sportcenter.controller.FieldServlet</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>ReservationServlet</servlet-name>
+		<servlet-class>me.nichel.sportcenter.controller.ReservationServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>CustomerServlet</servlet-name>
@@ -28,6 +33,11 @@
 	<servlet-mapping>
 		<servlet-name>FieldServlet</servlet-name>
 		<url-pattern>/FieldServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReservationServlet</servlet-name>
+		<url-pattern>/ReservationServlet.do</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
