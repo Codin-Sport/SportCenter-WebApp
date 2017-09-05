@@ -8,11 +8,11 @@ consisting in a system that allow to create and manage customers, sport fields a
 ## Screenshots
 
 
-![Customer List](screenshots/Screen Shot 2017-02-02 at 5.12.48 PM.png)
-![Customer Edit](screenshots/Screen Shot 2017-02-02 at 5.13.16 PM.png)
+![Customer List](screenshots/Screen%20Shot%202017-02-02%20at%205.12.48%20PM.png)
+![Customer Edit](screenshots/Screen%20Shot%202017-02-02%20at%205.13.16%20PM.png)
 
-![Field List](screenshots/Screen Shot 2017-02-02 at 5.12.52 PM.png)
-![Field Edit](screenshots/Screen Shot 2017-02-02 at 5.13.36 PM.png)
+![Field List](screenshots/Screen%20Shot%202017-02-02%20at%205.12.52%20PM.png)
+![Field Edit](screenshots/Screen%20Shot%202017-02-02%20at%205.13.36%20PM.png)
 
-![Reservation List](screenshots/Screen Shot 2017-02-02 at 5.12.44 PM.png)
-![Reservation Edit](screenshots/Screen Shot 2017-02-02 at 5.12.38 PM.png)
+![Reservation List](screenshots/Screen%20Shot%202017-02-02%20at%205.12.44%20PM.png)
+![Reservation Edit](screenshots/Screen%20Shot%202017-02-02%20at%205.12.38%20PM.png)
